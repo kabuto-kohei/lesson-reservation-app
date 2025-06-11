@@ -113,6 +113,6 @@
 
   .select {
     font-size: 15px;
-    padding: 14px 12px; /* モバイルでも余裕のある高さ */
+    padding: 24px 12px; /* モバイルでも余裕のある高さ */
   }
 }
