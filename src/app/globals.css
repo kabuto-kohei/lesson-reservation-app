@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap');
 @import "tailwindcss";
 @import "@fullcalendar/common/main.css";
 @import "@fullcalendar/daygrid/main.css";
@@ -9,7 +9,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-sans: 'Noto Sans JP', Arial, Helvetica, sans-serif;
+  --font-sans: 'Zen Maru Gothic', sans-serif;
   --font-mono: monospace;
 }
 
