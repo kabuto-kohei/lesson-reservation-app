@@ -30,13 +30,13 @@ interface Schedule {
   capacity: number;
 }
 
-export default function BookingList({ userId }: { userId: string }) {
+export default function BookingList({ userName }: { userName: string }) {
   const [bookings, setBookings] = useState<Booking[]>([]);
   const [scheduleMap, setScheduleMap] = useState<Record<string, Schedule>>({});
 
   useEffect(() => {
     const fetchBookings = async () => {
-      const q = query(collection(db, "bookings"), where("userId", "==", userId));
+      const q = query(collection(db, "bookings"), where("userName", "==", userName));
       const snapshot = await getDocs(q);
       const data: Booking[] = snapshot.docs.map((doc) => {
         const d = doc.data() as Omit<Booking, "id">;
@@ -66,7 +66,7 @@ export default function BookingList({ userId }: { userId: string }) {
     };
 
     fetchBookings();
-  }, [userId]);
+  }, [userName]);
 
   const handleCancel = async (id: string) => {
     if (!confirm("本当にキャンセルしますか？")) return;

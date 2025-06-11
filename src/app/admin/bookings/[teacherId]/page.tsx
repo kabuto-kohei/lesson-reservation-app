@@ -15,8 +15,8 @@ import BackButton from "@/components/Common/BackButton";
 
 type Booking = {
   id: string;
-  userId: string;
   scheduleId: string;
+  userName: string;
 };
 
 type Schedule = {
@@ -41,27 +41,20 @@ export default function BookingListPage() {
       }));
       const scheduleMap = Object.fromEntries(schedules.map(s => [s.id, s.date]));
 
-      // 予約取得
+      // 予約取得（userNameで取得）
       const bookingSnap = await getDocs(collection(db, "bookings"));
       const bookings: Booking[] = bookingSnap.docs.map((doc) => ({
         id: doc.id,
         scheduleId: doc.data().scheduleId,
-        userId: doc.data().userId,
+        userName: doc.data().userName || "（名前未入力）",
       })).filter(b => scheduleMap[b.scheduleId]);
-
-      // ユーザー取得
-      const userSnap = await getDocs(collection(db, "users"));
-      const userMap: Record<string, string> = Object.fromEntries(
-        userSnap.docs.map((doc) => [doc.id, doc.data().displayName || "（名前未設定）"])
-      );
 
       // 日付ごとに名前でグループ化
       const groupedByDate: Record<string, string[]> = {};
       for (const b of bookings) {
         const date = scheduleMap[b.scheduleId];
-        const name = userMap[b.userId] || "（不明）";
         if (!groupedByDate[date]) groupedByDate[date] = [];
-        groupedByDate[date].push(name);
+        groupedByDate[date].push(b.userName);
       }
 
       setGrouped(groupedByDate);

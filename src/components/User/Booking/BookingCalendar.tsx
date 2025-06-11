@@ -11,10 +11,9 @@ import {
   Timestamp,
 } from "firebase/firestore";
 import styles from "./BookingCalendar.module.css";
-import { getUserId } from "@/lib/userId";
 import type { Schedule } from "@/types/schedule";
 import Calendar from "@/components/Calendar/Calendar";
-import { getLessonTypeLabel } from "@/lib/lessonUtils"; // ← ★追加
+import { getLessonTypeLabel } from "@/lib/lessonUtils";
 
 export default function BookingCalendar({
   teacherId,
@@ -31,6 +30,7 @@ export default function BookingCalendar({
   const [availableDates, setAvailableDates] = useState<string[]>([]);
   const [allSchedules, setAllSchedules] = useState<Schedule[]>([]);
   const [bookingCounts, setBookingCounts] = useState<Record<string, number>>({});
+  const [userName, setUserName] = useState<string>("");
 
   const selectedDateStr = selectedDate?.toISOString().split("T")[0];
   const schedulesForDay = allSchedules.filter((s) => s.date === selectedDateStr);
@@ -95,29 +95,26 @@ export default function BookingCalendar({
   };
 
   const handleConfirm = async () => {
-    if (!selectedScheduleId) return;
-  
-    const userId = getUserId();
-    if (!userId) {
-      alert("ログインが必要です。");
+    if (!selectedScheduleId || !userName.trim()) {
+      alert("予約枠とお名前を入力してください");
       return;
     }
-  
+
     try {
       await addDoc(collection(db, "bookings"), {
         scheduleId: selectedScheduleId,
-        userId,
+        userName: userName.trim(),
         createdAt: Timestamp.now(),
       });
       alert("予約が完了しました！");
       setSelectedScheduleId(null);
+      setUserName("");
       fetchBookingCounts();
     } catch (error) {
       console.error("予約失敗:", error);
       alert("予約に失敗しました。もう一度お試しください。");
     }
   };
-  
 
   return (
     <div className={styles.container}>
@@ -164,9 +161,22 @@ export default function BookingCalendar({
         )}
       </div>
 
+      <div className={styles.inputWrapper}>
+        <label>
+          お名前：
+          <input
+            type="text"
+            value={userName}
+            onChange={(e) => setUserName(e.target.value)}
+            placeholder="お名前を入力"
+            className={styles.inputField}
+          />
+        </label>
+      </div>
+
       <div className={styles.footer}>
         <button
-          disabled={!selectedScheduleId}
+          disabled={!selectedScheduleId || !userName.trim()}
           className={styles.confirmButton}
           onClick={handleConfirm}
         >

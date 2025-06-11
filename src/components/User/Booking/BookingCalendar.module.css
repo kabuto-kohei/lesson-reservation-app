@@ -92,6 +92,17 @@
   color: #721c24;
 }
 
+.inputWrapper {
+  margin-top: 16px;
+}
+
+.inputField {
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+}
+
 /* ▼ カレンダー設定（react-calendar） */
 
 /* 日付セルの共通設定 */
