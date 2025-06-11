@@ -1,10 +1,7 @@
 // src/lib/userId.ts
 import { getAuth } from "firebase/auth";
 
-export function getUserId(): string {
+export function getUserId(): string | null {
   const user = getAuth().currentUser;
-  if (!user) {
-    throw new Error("ユーザーがログインしていません");
-  }
-  return user.uid;
+  return user?.uid ?? null;
 }

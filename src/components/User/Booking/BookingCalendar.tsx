@@ -96,8 +96,13 @@ export default function BookingCalendar({
 
   const handleConfirm = async () => {
     if (!selectedScheduleId) return;
+  
     const userId = getUserId();
-
+    if (!userId) {
+      alert("ログインが必要です。");
+      return;
+    }
+  
     try {
       await addDoc(collection(db, "bookings"), {
         scheduleId: selectedScheduleId,
@@ -112,6 +117,7 @@ export default function BookingCalendar({
       alert("予約に失敗しました。もう一度お試しください。");
     }
   };
+  
 
   return (
     <div className={styles.container}>
