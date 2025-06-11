@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { db } from "@/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import styles from "./UserTeacherSelector.module.css";
+import BackButton from "@/components/Common/BackButton";
 
 type Teacher = {
   id: string;
@@ -29,6 +30,7 @@ export default function UserTeacherSelector() {
 
   return (
     <div className={styles.container}>
+       <BackButton href="/user/home" />
       <h1 className={styles.heading}>🧗 講師選択</h1>
   
       <select

@@ -1,11 +1,17 @@
 .home-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 480px;
+  max-height: 100vh;
   padding: 32px 16px;
-  min-height: 100vh;
-  background-color: #f9f9f9;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
 }
 
 .home-heading {
@@ -13,6 +19,7 @@
   font-weight: bold;
   margin-bottom: 32px;
   text-align: center;
+  color: #3368ee;
 }
 
 .home-buttons {
@@ -21,6 +28,7 @@
   gap: 20px;
   width: 100%;
   max-width: 320px;
+  margin: 0 auto;
 }
 
 .home-button {
@@ -66,6 +74,12 @@
 
 /* モバイル対応 */
 @media (max-width: 480px) {
+  .home-container {
+    padding: 24px 16px;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
   .home-heading {
     font-size: 20px;
     margin-bottom: 24px;
