@@ -33,7 +33,7 @@
   flex-direction: column;
   gap: 12px;
   margin-top: 12px;
-  width: 112%; 
+  width: 100%; 
   box-sizing: border-box; 
 }
 
@@ -184,7 +184,7 @@
   .container {
     padding: 16px;
     max-width: 100%;
-    align-items: stretch;
+    margin: 0 auto;
   }
 
   .heading {
@@ -200,12 +200,13 @@
 
   .slots {
     gap: 10px;
-    width: 100%;
+    width: 100% !important;
   }
 
   .slot {
     padding: 12px;
     font-size: 15px;
+    width: 100%;
   }
 
   .confirmButton {
