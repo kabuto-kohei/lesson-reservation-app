@@ -108,3 +108,40 @@
 .outsideMonth {
   color: #ccc;
 }
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 16px;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .monthLabel {
+    font-size: 16px;
+    min-width: auto;
+  }
+
+  .nav button {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .grid {
+    gap: 4px;
+  }
+
+  .dateCell {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .circle {
+    font-size: 10px;
+  }
+
+  .dayLabel {
+    font-size: 12px;
+  }
+}
