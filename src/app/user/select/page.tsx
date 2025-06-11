@@ -7,12 +7,13 @@ import BackButton from "@/components/Common/BackButton";
 
 
 export default function UserHomePage() {
-  const [userId, setUserId] = useState("");
+  const [userId, setUserId] = useState<string | null>(null);
 
-  useEffect(() => {
-    const uid = getUserId();
-    setUserId(uid);
-  }, []);
+useEffect(() => {
+  const uid = getUserId();
+  setUserId(uid);
+}, []);
+
 
   if (!userId) return null; // 初期化待ち
 
