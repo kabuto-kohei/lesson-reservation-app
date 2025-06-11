@@ -210,5 +210,5 @@ export default function ScheduleManager() {
         <button onClick={handleAdd} className={styles.confirmButton}>追加</button>
       </div>
     </div>
-  )
+  );
 }

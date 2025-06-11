@@ -53,5 +53,4 @@ export default function UserTeacherSelector() {
       </select>
     </div>
   );
-  
 }
