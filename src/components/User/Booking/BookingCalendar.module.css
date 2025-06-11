@@ -1,0 +1,170 @@
+.container {
+  padding: 24px;
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.backbottun {
+  font-size: 16px;
+  align-self: flex-end; 
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.subheading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 12px;
+   text-align: left;
+}
+
+.slots {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+  width: 112%; 
+  box-sizing: border-box; 
+}
+
+.slot {
+  padding: 10px;
+  width: 100%;  
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  display: flex;
+  align-items: center;
+  box-sizing: border-box; 
+}
+
+.slot input {
+  margin-right: 8px;
+}
+
+.selected {
+  background: #d0ebff;
+  border-color: #339af0;
+}
+
+.noSlot {
+  font-size: 14px;
+  color: #888;
+}
+
+.footer {
+  margin-top: 24px;
+}
+
+.confirmButton {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.confirmButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.full {
+  opacity: 0.6;
+  pointer-events: none;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+/* ▼ カレンダー設定（react-calendar） */
+
+/* 日付セルの共通設定 */
+.react-calendar__tile {
+  border-radius: 999px;
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  padding: 6px 0;
+  font-weight: bold;
+  background: white;
+  color: black;
+}
+
+/* 予約可能日（未選択） */
+.activeDate {
+  background: white !important;
+  color: #0070f3 !important;
+  border: 2px solid #0070f3 !important;
+}
+
+/* 予約可能日（選択中） */
+.selectedDate {
+  background: #0070f3 !important;
+  color: white !important;
+  border: none !important;
+}
+
+/* 予約不可：平日・選択中 */
+.inactive-selected {
+  background: white !important;
+  color: black !important;
+  border: none !important;
+}
+
+/* 予約不可：平日・未選択 */
+.inactive-default {
+  background: white !important;
+  color: #ccc !important;
+  border: none !important;
+}
+
+/* 予約不可：土曜・選択中 */
+.saturday-selected {
+  background: white !important;
+  color: #0070f3 !important;
+  border: none !important;
+}
+
+/* 予約不可：土曜・未選択 */
+.saturday-default {
+  background: white !important;
+  color: #90caf9 !important;
+  border: none !important;
+}
+
+/* 予約不可：日曜・祝日・選択中 */
+.sunday-selected {
+  background: white !important;
+  color: #f44336 !important;
+  border: none !important;
+}
+
+/* 予約不可：日曜・祝日・未選択 */
+.sunday-default {
+  background: white !important;
+  color: #ef9a9a !important;
+  border: none !important;
+}
+
+/* 他の月の日付セル */
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #ccc !important;
+  background: white !important;
+  pointer-events: none;
+}

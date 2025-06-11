@@ -1,0 +1,46 @@
+.container {
+    padding: 32px 20px;
+    max-width: 720px;
+    width: 100%;
+    background-color: #f5f9ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3368ee;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .menu a {
+    padding: 14px 20px;
+    font-size: 16px;
+    background-color: #e0eaff;
+    border: 2px solid #3368ee;
+    border-radius: 8px;
+    color: #1a2b50;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.2s;
+  }
+  
+  .menu a:hover {
+    background-color: #d0e2ff;
+    transform: translateY(-2px);
+  }
+  

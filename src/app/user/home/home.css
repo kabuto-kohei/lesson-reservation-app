@@ -1,0 +1,73 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.home-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.home-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.home-button {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+/* 色のバリエーション */
+.home-button.blue {
+  background-color: #0070f3;
+}
+.home-button.blue:hover {
+  background-color: #0059c1;
+}
+
+.home-button.green {
+  background-color: #10b981;
+}
+.home-button.green:hover {
+  background-color: #0f9d6c;
+}
+
+.home-button.orange {
+  background-color: #f97316;
+}
+.home-button.orange:hover {
+  background-color: #ea580c;
+}
+
+.home-button.purple {
+  background-color: #7c3aed;
+}
+.home-button.purple:hover {
+  background-color: #6d28d9;
+}
+
+/* モバイル対応 */
+@media (max-width: 480px) {
+  .home-button {
+    font-size: 16px;
+    padding: 14px;
+  }
+}

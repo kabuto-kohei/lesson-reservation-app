@@ -1,0 +1,74 @@
+.container {
+  max-width: 400px;
+  width: 100%;
+  padding: 24px 16px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  min-height: 100vh;       
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
+  width: 100%;
+}
+
+.teacherList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.teacherItem {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.teacherName {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.teacherDesc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.button {
+  padding: 10px 16px;
+  font-size: 14px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 240px;
+}
+
+.button:hover {
+  background-color: #005bb5;
+}
+
+.select {
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
