@@ -1,5 +1,12 @@
-/* src/app/admin/home/[teacherId]/page.module.css */
+/* グローバルに青背景を設定するなら body にも指定 */
+body {
+  background-color: #f0f4ff;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 
+/* 中央寄せカード */
 .container {
   position: fixed;
   top: 50%;
@@ -10,7 +17,7 @@
   width: 100%;
   max-height: 100vh;
   overflow-y: auto;
-  background-color: #f0f4ff;
+  background-color: white; /* 中身のカードは白に */
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
@@ -48,11 +55,9 @@
   box-shadow: 0 0 0 3px rgba(51, 104, 238, 0.2);
 }
 
+/* ▼ スマホ対応 */
 @media (max-width: 480px) {
   .container {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 24px 16px;
     max-width: 100%;
     max-height: 100vh;
