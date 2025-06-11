@@ -7,12 +7,13 @@ import { getUserId } from "@/lib/userId";
 import BackButton from "@/components/Common/BackButton";
 
 export default function UserBookingListPage() {
-  const [userId, setUserId] = useState("");
+  const [userId, setUserId] = useState<string | null>(null); // ← null 許可
 
-  useEffect(() => {
-    const uid = getUserId();
-    setUserId(uid);
-  }, []);
+useEffect(() => {
+  const uid = getUserId();
+  setUserId(uid); // ← uid が null でもOKになる
+}, []);
+
 
   if (!userId) return null;
 
