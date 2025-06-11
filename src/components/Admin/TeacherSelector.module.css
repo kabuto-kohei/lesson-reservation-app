@@ -41,3 +41,25 @@
   box-shadow: 0 0 0 3px rgba(51, 104, 238, 0.2);
 }
 
+@media (max-width: 768px) {
+  .container {
+    position: static; /* 中央寄せ解除 */
+    transform: none;
+    margin: 32px auto;
+    padding: 20px 16px;
+    max-width: 100%;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .select {
+    font-size: 16px;
+    padding: 10px 14px;
+    width: 100%;
+  }
+}

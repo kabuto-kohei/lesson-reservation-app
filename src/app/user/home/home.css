@@ -66,8 +66,17 @@
 
 /* モバイル対応 */
 @media (max-width: 480px) {
+  .home-heading {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .home-buttons {
+    gap: 16px;
+  }
+
   .home-button {
     font-size: 16px;
-    padding: 14px;
+    padding: 12px;
   }
 }

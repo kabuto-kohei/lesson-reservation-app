@@ -108,3 +108,66 @@
   font-size: 16px;
   box-sizing: border-box;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+    max-width: 100%;
+    align-items: stretch;
+  }
+
+  .backbottun {
+    font-size: 14px;
+  }
+
+  .heading {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .subheading {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .slots {
+    gap: 10px;
+    width: 100% !important;
+  }
+
+  .slot {
+    padding: 12px;
+    font-size: 15px;
+    width: 100%;
+  }
+
+  .noSlot {
+    font-size: 14px;
+  }
+
+  .form {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  .input {
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+  }
+
+  .confirmButton {
+    width: 100%;
+    font-size: 17px;
+    padding: 14px;
+    margin-top: 8px;
+  }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

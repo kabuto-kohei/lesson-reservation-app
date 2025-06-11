@@ -29,3 +29,23 @@
   margin-top: 8px;
   padding-left: 16px;
 }
+
+@media (max-width: 480px) {
+  .container {
+    padding: 24px 16px;
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .item {
+    padding: 12px;
+  }
+
+  .nameList {
+    padding-left: 12px;
+  }
+}
