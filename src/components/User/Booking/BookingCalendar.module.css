@@ -179,3 +179,54 @@
   background: white !important;
   pointer-events: none;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 16px;
+    max-width: 100%;
+    align-items: stretch;
+  }
+
+  .heading {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .subheading {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+  }
+
+  .slots {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .slot {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .confirmButton {
+    width: 100%;
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  .inputField {
+    font-size: 16px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .backbottun {
+    font-size: 14px;
+  }
+}
