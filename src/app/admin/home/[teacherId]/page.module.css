@@ -1,17 +1,18 @@
 /* src/app/admin/home/[teacherId]/page.module.css */
 
 .container {
-  padding: 32px 20px;
-  max-width: 480px;
-  width: 100%;
-  background-color: #ffffff; /* ← カード部分だけ白 */
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 32px 20px;
+  max-width: 480px;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  background-color: #ffffff; /* カード部分は白 */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
 }
 
@@ -47,16 +48,14 @@
   box-shadow: 0 0 0 3px rgba(51, 104, 238, 0.2);
 }
 
-/* ▼ スマホ対応 */
+/* ▼ スマホ対応（中央寄せを維持） */
 @media (max-width: 480px) {
   .container {
     padding: 24px 16px;
     max-width: 100%;
-    top: 0;
-    left: 0;
-    transform: none;
-    min-height: 100vh;
-    border-radius: 0;
+    max-height: 100vh;
+    overflow-y: auto;
+    border-radius: 8px;
     box-shadow: none;
   }
 
