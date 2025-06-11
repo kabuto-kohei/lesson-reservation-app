@@ -21,3 +21,15 @@
     background-color: #264dc4;
   }
   
+  @media (max-width: 480px) {
+    .backButton {
+      top: 12px;
+      right: 12px;
+    }
+  
+    .backLink {
+      padding: 6px 12px;
+      font-size: 13px;
+    }
+  }
+  
