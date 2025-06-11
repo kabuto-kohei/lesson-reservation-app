@@ -184,5 +184,5 @@ export default function BookingCalendar({
         </button>
       </div>
     </div>
-  );
+  )
 }
