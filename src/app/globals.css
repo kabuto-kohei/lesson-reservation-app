@@ -1,15 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import "tailwindcss";
 @import "@fullcalendar/common/main.css";
 @import "@fullcalendar/daygrid/main.css";
 @import "@fullcalendar/timegrid/main.css";
 @import "react-calendar/dist/Calendar.css";
 
-
 /* 明るいテーマ */
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --font-sans: Arial, Helvetica, sans-serif;
+  --font-sans: 'Noto Sans JP', Arial, Helvetica, sans-serif;
   --font-mono: monospace;
 }
 
@@ -25,5 +25,5 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f4ff;  /* 全体背景色 */
-  font-family: Arial, sans-serif;
+  font-family: var(--font-sans);
 }
