@@ -12,7 +12,7 @@ export default function BookingPage() {
   return (
   <div>
   <BackButton href={`/user/select`} />
-  <BookingCalendar teacherId={teacherId} />;
+  <BookingCalendar teacherId={teacherId} />
   </div>
   )
 }

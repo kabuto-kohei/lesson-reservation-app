@@ -7,7 +7,7 @@ export default function TrialPage() {
   return (
       <div>
         <BackButton href="/user/home" />
-        <BookingCalendar lessonType="rope" />;
+        <BookingCalendar lessonType="rope" />
       </div>
     );
 }

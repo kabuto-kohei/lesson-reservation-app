@@ -7,9 +7,7 @@ export default function RopePage() {
   return (
     <div>
       <BackButton href="/user/home" />
-      <BookingCalendar lessonType="rope" />;
+      <BookingCalendar lessonType="rope" />
     </div>
   );
-  
-  
 }
