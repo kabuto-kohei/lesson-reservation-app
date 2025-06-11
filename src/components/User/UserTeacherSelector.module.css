@@ -71,7 +71,7 @@
 
 .select {
   font-size: 16px;
-  padding: 20px 14px; /* ✅ 高さしっかり確保 */
+  padding: 12px 14px;
   width: 100%;
   margin-top: 24px;
   border-radius: 6px;
@@ -84,6 +84,7 @@
 
 @media (max-width: 768px) {
   .container {
+    max-width: 320px;
     padding: 20px 14px;
     border-radius: 8px;
     box-shadow: none;
@@ -115,6 +116,6 @@
 
   .select {
     font-size: 16px;
-    padding: 20px 14px; /* ✅ モバイルでもゆとりあり */
+    padding: 16px 14px;
   }
 }
